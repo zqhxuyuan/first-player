@@ -1,0 +1,35 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                           controllers.HomeController.index
+# An example controller showing how to use dependency injection
+GET     /count                      controllers.CountController.count
+# An example controller showing how to write asynchronous code
+GET     /message                    controllers.AsyncController.message
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+# http://localhost:9000/hello?n=Play!
+GET /hello                          controllers.HomeController.hello(n: String)
+
+# Products Demo From <<Play For Scala Chapter 2>>
+POST /products                      controllers.Products.save
+## make sure /products/new before /products/:ean ....
+GET  /products/new                  controllers.Products.newProduct
+
+GET /products                       controllers.Products.products
+GET /products/:ean                  controllers.Products.show(ean: Long)
+# http://localhost:9000/barcode/5010255079763
+GET /barcode/:ean                   controllers.Products.barcode(ean: Long)
+
+GET  /picks                         controllers.PickLists.index
+GET  /preview                       controllers.PickLists.preview(warehouse: String)
+POST /sendasync                     controllers.PickLists.sendAsync(warehouse: String)
+GET /backlog/:warehouse             controllers.PickLists.backlog(warehouse: String)
+
+GET	/catalog		                controllers.ProductsLayout.catalog
+GET	/catalog10		                controllers.ProductsLayout.catalog10
+GET	/catalog11		                controllers.ProductsLayout.catalog11

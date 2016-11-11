@@ -1,0 +1,6 @@
+@(products: Seq[Product3])(implicit cart: Cart)
+
+@shop.cart11("") {
+    <h2>Catalog</h2>
+    @views.html.shop.productList(products)
+}

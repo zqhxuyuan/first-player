@@ -1,0 +1,11 @@
+@(products: Seq[Product3])
+@shop.main3() {
+    <h2>Products</h2>
+    <ul class="products">
+    @for(product <- products) {
+        <li>
+            <h3>@product.name</h3>
+            <p class="description">@product.description</p>
+        </li> }
+    </ul>
+}

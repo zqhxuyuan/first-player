@@ -1,0 +1,32 @@
+@(products: Seq[Product3])
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>paperclips.example.com</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/bootstrap.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+    </head>
+    <body>
+        <div id="header">
+            <h1>Products</h1>
+        </div>
+        <div id="navigation">
+            <ul>
+                <li><a href="@routes.ProductsLayout.catalog">Products</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <h2>Products</h2>
+            <ul class="products">
+            @for(product <- products) {
+                <li>
+                    <h3>@product.name</h3>
+                    <p class="description">@product.description</p>
+                </li> }
+            </ul> </div>
+        <footer>
+            <p>Copyright paperclips.example.com</p>
+        </footer>
+    </body>
+</html>

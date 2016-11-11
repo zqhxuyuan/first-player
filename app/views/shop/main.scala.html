@@ -1,0 +1,21 @@
+@(content: Html)
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>paperclips.example.com</title>
+        <link href="@routes.Assets.versioned("stylesheets/main.css")" rel="stylesheet">
+        <link href="@routes.Assets.versioned("stylesheets/bootstrap.css")" rel="stylesheet">
+    </head>
+    <body>
+        <div id="header">
+            <h1>Products</h1>
+        </div>
+        @shop.navigation
+        <div id="content">
+        @content
+        </div>
+        <footer>
+            <p>Copyright paperclips.example.com</p>
+        </footer>
+    </body>
+</html>
