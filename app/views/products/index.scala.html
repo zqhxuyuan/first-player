@@ -1,0 +1,28 @@
+@()
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Products</title>
+        <link rel='stylesheet' type='text/css' href='@routes.Assets.versioned("stylesheets/bootstrap.css")'>
+        <link rel='stylesheet' type='text/css' href="@routes.Assets.versioned("stylesheets/main.css")">
+        <script src='@routes.Assets.versioned("javascripts/jquery-1.9.0.min.js")' type='text/javascript'></script>
+        <script src='@routes.Assets.versioned("javascripts/products.js")' type='text/javascript'></script>
+    </head>
+    <body>
+        <div class="screenshot">
+            <div class="navbar navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <a class="brand" href="@routes.ProductsJSON.index()">Product catalog</a>
+                        <a href="@routes.ProductsJSON.list()">JSON</a>
+                        <ul class="nav"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <table data-list="@routes.ProductsJSON.list" data-details="@routes.ProductsJSON.details(0)">
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

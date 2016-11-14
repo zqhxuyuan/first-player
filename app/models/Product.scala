@@ -23,4 +23,12 @@ object Product {
     products = products + product
   }
 
+  def save(product: Product) = {
+    findByEan(product.ean).map( oldProduct =>
+      this.products = this.products - oldProduct + product
+    ).getOrElse(
+      throw new IllegalArgumentException("Product not found")
+    )
+  }
+
 }

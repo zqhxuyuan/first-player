@@ -1,0 +1,9 @@
+@(myForm: Form[String])(implicit messages: Messages)
+
+@import play.api.templates.PlayMagic._
+
+@helper.inputText(myForm("mydatetime1"), '_error -> "Faaack", '_showErrors -> true)
+
+@helper.input(myForm("mydatetime2")) { (id, name, value, args) =>
+    <input type="datetime" name="@name" id="@id" @toHtmlArgs(args) />
+}

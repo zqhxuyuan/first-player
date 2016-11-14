@@ -33,3 +33,31 @@ GET /backlog/:warehouse             controllers.PickLists.backlog(warehouse: Str
 GET	/catalog		                controllers.ProductsLayout.catalog
 GET	/catalog10		                controllers.ProductsLayout.catalog10
 GET	/catalog11		                controllers.ProductsLayout.catalog11
+
+# Forms Demos
+GET		/formmapping1               controllers.FormMapping.createUser()
+GET		/formmapping2               controllers.FormMapping.createUserImplicit()
+GET		/manualform/createform      controllers.FormDemos.createForm()
+POST    /manualform/create          controllers.FormDemos.create()
+GET 	/generatedform/createform   controllers.FormDemos.createFormGen()
+POST	/generatedform/create	    controllers.FormDemos.createGen()
+GET		/customform	                controllers.FormDemos.customForm()
+GET 	/generatedform/createFormBootstrap      controllers.FormDemos.createFormBootstrap()
+GET 	/generatedform/createBootstrap          controllers.FormDemos.createBootstrap()
+
+#GET		/advancedform/createlocaldateform controllers.AdvancedForm.createLocalDateForm()
+#POST	/advancedform/createlocaldate controllers.AdvancedForm.createLocalDate()
+#GET		/variousmappings/form controllers.VariousMappings.form()
+#POST	/variousmappings/process		controllers.VariousMappings.process()
+#GET		/variousmappings/contactsform controllers.VariousMappings.showContactsForm()
+
+GET		/fileupload/manualform      controllers.FormDemos.showManualUploadForm()
+GET		/fileupload/form            controllers.FormDemos.showUploadForm()
+POST	/fileupload/upload          controllers.FormDemos.upload()
+POST	/fileupload/upload2         controllers.FormDemos.upload2()
+
+GET /products2                      controllers.ProductsJSON.list
+GET /products3                      controllers.ProductsJSON.index
+GET /products2/:ean                 controllers.ProductsJSON.details(ean: Long)
+PUT /products2/:ean                 controllers.ProductsJSON.save(ean: Long)
+
