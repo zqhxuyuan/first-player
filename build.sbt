@@ -11,7 +11,9 @@ libraryDependencies ++= Seq(
   cache,
   ws,
   "org.scalatestplus.play" %% "scalatestplus-play" % "1.5.1" % Test,
-  "net.sf.barcode4j" % "barcode4j" % "2.0"
+  "net.sf.barcode4j" % "barcode4j" % "2.0",
+  "com.adrianhurt" %% "play-bootstrap" % "1.1-P25-B3",
+  "org.webjars" % "font-awesome" % "4.6.3"
 )
 
 //libraryDependencies += "com.typesafe.play" % "anorm_2.11" % "2.4.0"

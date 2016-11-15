@@ -1,0 +1,19 @@
+@(fooForm: Form[String])(implicit messages: Messages)
+
+@implicitFC = @{ b3.horizontal.fieldConstructor("col-md-3", "col-md-9") }
+
+@fruits = @{ Seq("A"->"Apples","P"->"Pears","B"->"Bananas") }
+
+@bootstrap.bootstrap("Mixed Forms", tab = "index") {
+
+    <h1 id="mixed-forms" class="page-header">Mixed Forms</h1>
+
+
+    @b3.form(routes.PlayBootstrap.mixed) {
+        @b3.text( fooForm("foo"), '_label -> "Input Text", 'placeholder -> "A simple text..." )
+        @b3.select( fooForm("foo"), options = fruits, '_label -> "Select a fruit" )
+        @b3.checkbox( fooForm("foo"), '_text -> "Checkbox", 'checked -> true )
+        @b3.submit('class -> "btn btn-default"){ <span class="glyphicon glyphicon-ok"></span> Save changes }
+    }
+}
+

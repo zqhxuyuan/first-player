@@ -82,7 +82,7 @@ class FormDemos @Inject() (val messagesApi: MessagesApi) extends Controller with
     Ok(views.html.forms.manualUpload())
   }
 
-  //手动上传(原声的HTML)
+  //手动上传(原生的HTML)
   def upload() = Action(parse.multipartFormData) { request =>
     //request.body is of type MultipartFormData[TemporaryFile].
     //You can extract a file by the name of the input field—image in our case.

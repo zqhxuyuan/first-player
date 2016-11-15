@@ -61,3 +61,7 @@ GET /products3                      controllers.ProductsJSON.index
 GET /products2/:ean                 controllers.ProductsJSON.details(ean: Long)
 PUT /products2/:ean                 controllers.ProductsJSON.save(ean: Long)
 
+GET     /bootstrap                      controllers.PlayBootstrap.bootstrap()
+GET     /mixed                          controllers.PlayBootstrap.mixed()
+GET     /generatedform/createform2      controllers.PlayBootstrap.createFormGen()
+POST	/generatedform/create2	        controllers.PlayBootstrap.createGen()
