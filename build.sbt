@@ -10,13 +10,20 @@ libraryDependencies ++= Seq(
   jdbc,
   cache,
   ws,
+  evolutions,
+  "com.h2database" % "h2" % "1.3.170",
+  "com.typesafe.play" %% "anorm" % "2.4.0",
+  "com.typesafe.slick" %% "slick" % "3.1.0",
   "org.scalatestplus.play" %% "scalatestplus-play" % "1.5.1" % Test,
   "net.sf.barcode4j" % "barcode4j" % "2.0",
-  "com.adrianhurt" %% "play-bootstrap" % "1.1-P25-B3",
   "org.webjars" % "font-awesome" % "4.6.3"
 )
 
-//libraryDependencies += "com.typesafe.play" % "anorm_2.11" % "2.4.0"
+libraryDependencies += "com.adrianhurt" % "play-bootstrap_2.11" % "1.1-P25-B3"
+
+//libraryDependencies += "com.typesafe.play" % "play-slick_2.11" % "2.0.2"
+
+//libraryDependencies += "com.typesafe.play" % "play-slick_2.10" % "1.1.1"
 
 //libraryDependencies += "org.squeryl" % "squeryl_2.11" % "0.9.7"
 

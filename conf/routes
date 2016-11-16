@@ -65,3 +65,19 @@ GET     /bootstrap                      controllers.PlayBootstrap.bootstrap()
 GET     /mixed                          controllers.PlayBootstrap.mixed()
 GET     /generatedform/createform2      controllers.PlayBootstrap.createFormGen()
 POST	/generatedform/create2	        controllers.PlayBootstrap.createGen()
+
+# anorm crud example
+GET     /computer                   controllers.ComputerController.index
+GET     /computers                  controllers.ComputerController.list(p:Int ?= 0, s:Int ?= 2, f ?= "")
+GET     /computers/new              controllers.ComputerController.create
+POST    /computers                  controllers.ComputerController.save
+GET     /computers/:id              controllers.ComputerController.edit(id:Long)
+POST    /computers/:id              controllers.ComputerController.update(id:Long)
+POST    /computers/:id/delete       controllers.ComputerController.delete(id:Long)
+
+#GET  /slick                            controllers.SlickController.index
+#GET  /slick/add                        controllers.SlickController.blank
+#POST /slick/product                    controllers.SlickController.insert
+#GET  /slick/product/$ean<\d{13}>       controllers.SlickController.details(ean: Long)
+#POST /slick/product/:id                controllers.SlickController.update(id: Long)
+#POST /slick/product/:id/delete         controllers.SlickController.delete(id: Long)

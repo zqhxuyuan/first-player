@@ -11,3 +11,12 @@ products.new.submit = Add
 products.new.success = Successfully added product {0}.
 validation.errors = Please correct the errors in the form.
 validation.ean.duplicate = A product with this EAN code already exists
+
+success.delete = Product '{0}' deleted!
+success.insert = Product '{0}' added!
+success.update = Product '{0}' updated!
+error.notFound = Product with EAN {0,number,0} not found
+error.number = Not a number
+error.required = Missing value
+
+computers.list.title={0,choice,0#No computers|1#One computer|1<{0,number,integer} computers} found
