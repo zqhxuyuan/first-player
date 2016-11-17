@@ -81,3 +81,12 @@ POST    /computers/:id/delete       controllers.ComputerController.delete(id:Lon
 #GET  /slick/product/$ean<\d{13}>       controllers.SlickController.details(ean: Long)
 #POST /slick/product/:id                controllers.SlickController.update(id: Long)
 #POST /slick/product/:id/delete         controllers.SlickController.delete(id: Long)
+
+GET     /spark/list                     controllers.SparkController.list
+GET     /spark/count                    controllers.SparkController.count
+GET     /spark/filter/:text             controllers.SparkController.filter(text: String)
+
+GET     /actor1/:name                          controllers.ActorController.sayHello1(name: String)
+GET     /actor/:name                          controllers.ActorController.sayHello(name: String)
+
+GET     /spark/job                     controllers.SubmitSparkJob.sparkJob
