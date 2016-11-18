@@ -38,8 +38,17 @@ libraryDependencies += "org.apache.spark" % "spark-streaming_2.11" % "1.6.2"
 
 libraryDependencies += "com.fasterxml.jackson.module" % "jackson-module-scala_2.11" % "2.7.6"
 
+//libraryDependencies += "com.github.dnvriend" %% "akka-persistence-jdbc" % "2.6.8"
+
 //dependencyOverrides ++= Set(
 //  "com.fasterxml.jackson.core" % "jackson-databind" % "2.4.4"
 //)
 
 //libraryDependencies += "com.github.joaovasques" % "play-spark-module" % "0.1.0"
+
+//artifact in (Compile, assembly) := {
+//  val art = (artifact in (Compile, assembly)).value
+//  art.copy(`classifier` = Some("assembly"))
+//}
+//
+//addArtifact(artifact in (Compile, assembly), assembly)

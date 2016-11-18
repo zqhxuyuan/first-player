@@ -5,7 +5,7 @@ import javax.inject.{Inject, Singleton}
 import org.apache.spark.sql.DataFrame
 import play.api.mvc._
 import play.api.mvc.Controller
-import util.SparkCommons
+import spark.SparkCommons
 
 @Singleton
 class SparkController @Inject() extends Controller {
@@ -27,4 +27,14 @@ class SparkController @Inject() extends Controller {
     Ok(toJsonString(rdd.filter(rdd("text").contains(text))))
   }
 
+  /*
+  def libs : Seq[String] = {
+    val libDir = play.api.Play.application.getFile("lib")
+    return if ( libDir.exists ) {
+      libDir.listFiles().map(_.getCanonicalFile().getAbsolutePath()).filter(_.endsWith(".jar"))
+    } else {
+      throw new IllegalStateException(s"lib dir is missing: $libDir")
+    }
+  }
+  */
 }
