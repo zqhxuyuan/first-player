@@ -75,6 +75,10 @@ GET     /computers/:id              controllers.ComputerController.edit(id:Long)
 POST    /computers/:id              controllers.ComputerController.update(id:Long)
 POST    /computers/:id/delete       controllers.ComputerController.delete(id:Long)
 
+GET     /transactions                 controllers.TransactionController.list
+GET     /transaction/new              controllers.TransactionController.add
+POST    /transaction                  controllers.TransactionController.save
+
 #GET  /slick                            controllers.SlickController.index
 #GET  /slick/add                        controllers.SlickController.blank
 #POST /slick/product                    controllers.SlickController.insert
@@ -90,3 +94,4 @@ GET     /actor1/:name               controllers.ActorController.sayHello1(name: 
 GET     /actor/:name                controllers.ActorController.sayHello(name: String)
 
 GET     /spark/job                  controllers.SubmitSparkJob.sparkJob
+GET     /spark/launcher             controllers.SparkController.launcher

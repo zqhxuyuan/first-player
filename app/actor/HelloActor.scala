@@ -16,5 +16,6 @@ class HelloActor extends Actor {
   def receive = {
     case SayHello(name: String) =>
       Thread.sleep(3000)
-      sender() ! "Hello, " + name }
+      sender() ! "Hello, " + name 
+  }
 }

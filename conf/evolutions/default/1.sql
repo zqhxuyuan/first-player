@@ -27,6 +27,15 @@ alter table computer add constraint fk_computer_company_1 foreign key (company_i
 create index ix_computer_company_1 on computer (company_id);
 
 
+CREATE TABLE `transactions` (
+  `id` bigint not null AUTO_INCREMENT primary key,
+  `symbol` varchar(10) DEFAULT NULL,
+  `ttype` varchar(10) DEFAULT NULL,
+  `quantity` int(10) DEFAULT NULL,
+  `date_time` timestamp not null default now(),
+  `notes` varchar(20) DEFAULT NULL
+);
+
 # --- !Downs
 
 SET REFERENTIAL_INTEGRITY FALSE;

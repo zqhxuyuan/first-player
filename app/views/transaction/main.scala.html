@@ -1,0 +1,18 @@
+@(content: Html)(implicit messages: Messages)
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Transaction database</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.versioned("stylesheets/bootstrap.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")"/>
+    </head>
+    <body>
+        <header class="topbar"></header>
+        
+        <section id="main">
+            @content
+        </section>
+        
+    </body>
+</html>

@@ -1,0 +1,31 @@
+@(transactions: List[Transaction])(implicit lang: Messages)
+
+@transaction.main {
+    <table class="zebra-striped">
+        <thead>
+            <tr>
+                <th>编号</th>
+                <th>symbol</th>
+                <th>ttype</th>
+                <th>数量</th>
+                <th>时间</th>
+                <th>备注</th>
+            </tr>
+        </thead>
+        <tbody>
+        @transactions.map {
+            case (t) => {
+                <tr>
+                    <td>@t.id</td>
+                    <td>@t.symbol</td>
+                    <td>@t.ttype</td>
+                    <td>@t.quantity</td>
+                    <td>@t.datetime</td>
+                    <td>@t.notes</td>
+                </tr>
+            }
+        }
+        </tbody>
+    </table>
+}
+

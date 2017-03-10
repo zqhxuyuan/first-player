@@ -9,6 +9,8 @@ object SparkCommons {
 
   val sparkCluster = play.Play.application.configuration.getString("pontus.spark.master.local")
 
+  val sparkLibPath = play.Play.application.configuration.getString("pontus.spark.lib.path")
+
   lazy val conf = {
     new SparkConf(false)
       .setMaster(sparkCluster)

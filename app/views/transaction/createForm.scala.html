@@ -1,0 +1,26 @@
+@(tranForm: Form[Transaction])(implicit messages: Messages)
+
+@import b3.vertical.fieldConstructor
+
+@transaction.main {
+    
+    <h1>Add a computer</h1>
+    
+    @b3.form(routes.TransactionController.save()) {
+        
+        <fieldset>
+            @b3.text(tranForm("symbol"), '_label -> "Symbol", '_help -> "")
+            @b3.text(tranForm("ttype"), '_label -> "TType", '_help -> "")
+            @b3.text(tranForm("quantity"), '_label -> "Quantity", '_help -> "")
+            @b3.text(tranForm("notes"), '_label -> "Notes", '_help -> "")
+        )
+        </fieldset>
+        
+        <div class="actions">
+            <input type="submit" value="Create" class="btn primary"> or
+            <a href="@routes.TransactionController.list()" class="btn">Cancel</a>
+        </div>
+        
+    }
+    
+}
