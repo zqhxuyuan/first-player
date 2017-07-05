@@ -27,4 +27,7 @@ class HomeController @Inject() extends Controller {
     Ok(views.html.hello(name))
   }
 
+  def echarts = Action {
+    Ok(views.html.echarts())
+  }
 }

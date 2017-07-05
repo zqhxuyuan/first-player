@@ -14,6 +14,7 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 
 # http://localhost:9000/hello?n=Play!
 GET /hello                          controllers.HomeController.hello(n: String)
+GET /echarts                          controllers.HomeController.echarts
 
 # Products Demo From <<Play For Scala Chapter 2>>
 POST /products                      controllers.Products.save
